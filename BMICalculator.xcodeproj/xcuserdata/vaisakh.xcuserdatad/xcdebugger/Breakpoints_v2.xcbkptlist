@@ -14,8 +14,8 @@
             filePath = "BMICalculator/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "bmiResultArray(_:)"
             landmarkType = "7">
          </BreakpointContent>

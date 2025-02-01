@@ -63,8 +63,14 @@ class ViewController: UIViewController {
     
     @IBAction func calculateClick(_ sender: UIButton) {
         if !validateHeightWeight(heightField.text, weightField.text) {
-            resultLabel.textColor = .systemRed
-            resultLabel.text = "Invalid input: Please enter valid height and weight"
+//            resultLabel.textColor = .systemRed
+//            resultLabel.text = "Invalid input: Please enter valid height and weight"
+            
+            let message = "\nPlease enter valid height and weight"
+            let alert = UIAlertController(title: "Invalid input!", message: message, preferredStyle: .alert)
+            let tapAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(tapAction)
+            self.present(alert, animated: true)
             return
             }
 
