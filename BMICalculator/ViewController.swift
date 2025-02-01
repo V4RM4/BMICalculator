@@ -91,6 +91,10 @@ class ViewController: UIViewController {
         bmiCategoryLabel.isHidden = false
         bmiHeaderLabel.isHidden = false
         
+        // This is for closing keyboard 
+        heightField.resignFirstResponder()
+        weightField.resignFirstResponder()
+        
         bmiLabel.text = bmiResultArray(bmi)[0]
         bmiCategoryLabel.text = bmiResultArray(bmi)[1]
         resultLabel.text = bmiResultArray(bmi)[2]
