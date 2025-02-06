@@ -160,13 +160,20 @@ class ViewController: UIViewController {
     
     func bmiResultArray(_ bmi: Double) -> [String] {
         let bmiString = String(format: "%.1f", bmi)
+        let bmiCategoies = """
+            \n
+            Underweight = BMI less than 18.5
+            Normal weight = BMI between 18.5 and 24.9
+            Overweight = BMI between 25 and 29.9
+            Obesity = BMI of 30 or greater
+            """
         if bmi < 18.5 {
             let result = "Underweight"
             let resultDescription = """
             You may need to gain weight.
             Ask your doctor if this is a healthy weight
             for you.
-            """
+            """+bmiCategoies
             bmiLabel.textColor = .systemBlue
             return [bmiString, result, resultDescription]
         } else if bmi < 25 {
@@ -175,7 +182,7 @@ class ViewController: UIViewController {
             You have a healthy weight!
             Try not to gain or lose weight. 
             Eat healthy and be physically active.
-            """
+            """+bmiCategoies
             bmiLabel.textColor = .systemGreen
             return [bmiString, result, resultDescription]
         } else if bmi < 30 {
@@ -185,7 +192,7 @@ class ViewController: UIViewController {
             Talk to your doctor or dietitian about 
             your health risks and if you need
             to lose weight.
-            """
+            """+bmiCategoies
             bmiLabel.textColor = .systemOrange
             return [bmiString, result, resultDescription]
         } else {
@@ -195,7 +202,7 @@ class ViewController: UIViewController {
             Talk to your doctor or dietitian about 
             safe and effective ways to lose
             weight and keep it off.
-            """
+            """+bmiCategoies
             bmiLabel.textColor = .systemRed
             return [bmiString, result, resultDescription]
         }
